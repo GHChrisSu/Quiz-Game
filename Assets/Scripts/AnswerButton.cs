@@ -1,32 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
-public class AnswerButton : MonoBehaviour {
+public class AnswerButton : MonoBehaviour 
+{
+	public Text answerText;
 
-    public Text answerText;
-    private AnswerData answerData;
-    private GameController gameController;
+	private GameController gameController;
+	private AnswerData answerData;
 
-	// Use this for initialization
-	void Start () {
-        gameController = FindObjectOfType<GameController>();
+	void Start()
+	{
+		gameController = FindObjectOfType<GameController>();
 	}
-	
-    public void Setup(AnswerData data)
-    {
-        answerData = data;
-        answerText.text = answerData.answerText;
-    }
 
-    public void HandleClick()
-    {
-        gameController.AnswerButtonClicked(answerData.isCorrect);
-    }
+	public void SetUp(AnswerData data)
+	{
+		answerData = data;
+		answerText.text = answerData.answerText;
+	}
 
-	// Update is called once per frame
-	void Update () {
-		
+	public void HandleClick()
+	{
+		gameController.AnswerButtonClicked(answerData.isCorrect);
 	}
 }

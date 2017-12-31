@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public class RoundData
 {
-    public string name;
-    public int timeLimitInSeconds;
-    public int pointsAddedForCorrectAnswer;
-    public QuestionData[] questions;
+	public string name;
+	public int timeLimitInSeconds;
+	public int pointsAddedForCorrectAnswer;
+	public QuestionData[] questions;
 }

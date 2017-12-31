@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
-public class MenuScreenController : MonoBehaviour {
-
+public class MenuScreenController : MonoBehaviour
+{
 	public void StartGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+	}
 }
